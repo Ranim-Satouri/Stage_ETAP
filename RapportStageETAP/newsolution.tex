@@ -1,0 +1,81 @@
+\documentclass[12pt]{report}
+\setcounter{secnumdepth}{5}
+\usepackage[french]{babel}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\Huge\bfseries\filcenter}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\renewcommand{\thepage}{}
+\input{insbox}
+\begin{document}
+ \thispagestyle{empty}
+%page de couverture
+\begin{center}
+UNIVERSITÉ DE TUNIS EL MANAR\\[15pt]
+FACULTÉ DES SCIENCES DE TUNIS
+
+\vspace{20PT}
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{fst}
+\end{figure}
+\vspace{20PT}
+\begin{huge}
+RAPPORT DE STAGE D'ÉTÉ
+\end{huge}
+\\
+\vspace{30pt}
+\begin{Large}
+Sujet:\\
+\end{Large}
+
+\vspace{30pt}
+\begin{Huge}
+Conception et développement d'une application de gestion des Factures 
+\end{Huge}
+\\
+\vspace{50pt}
+\begin{Large}
+Réalisé au sein de L'Entreprise Tunisienne d'Activités Pétrolièrs
+\end{Large}
+\end{center}
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{etap}
+  \label{fig:votre-label}
+\end{figure}
+\vspace{10pt}
+\begin{center}
+\begin{Large}
+Élaboré par:\\
+\vspace{10pt}
+SATOURI RANIM\\
+\vspace{10pt}
+Encadré par:\\
+\vspace{10pt}
+MANSOURI  AMAL
+\end{Large}
+
+\end{center}
+\newpage
+\textbf{\begin{LARGE}
+Remerciement
+\end{LARGE}}\\
+
+\fontsize{12}{25}\selectfont
+\addcontentsline{toc}{section}{Remerciement}
+Tout d’abord, je remercie Dieu de m’avoir accordé la santé et la patience pour mener à bien ce projet.\\
+
+Je souhaite également adresser mes sincères remerciements à l'Entreprise Tunisienne de l'Activité Pétrolière (ETAP) pour m'avoir offert l'opportunité de réaliser ce projet au sein de son organisation. Travailler au sein de l'ETAP a été une expérience enrichissante qui m'a permis de mettre en pratique mes connaissances académiques dans un environnement professionnel stimulant.\\
+
+Je tiens particulièrement à remercier chaleureusement Mme Mansouri Amal, mon encadrante, pour son soutien inestimable, sa passion pour l'enseignement et son encouragement constant tout au long de ce projet. Ses précieux conseils et son expertise ont grandement contribué à l'aboutissement de ce travail.\\
+\end{document}

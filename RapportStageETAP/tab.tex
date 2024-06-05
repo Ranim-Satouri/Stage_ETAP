@@ -1,0 +1,229 @@
+\documentclass[11pt]{report}
+\usepackage[french]{babel}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\Huge\bfseries\filcenter}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{float}
+\usepackage{array}
+
+\begin{document}
+
+\begin{table}[h]
+\centering
+
+\def\arraystretch{3}
+\begin{tabular}{|p{2.5cm}|p{14.5cm}|}
+   
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large}
+   \textbf{SOMMAIRE D'IDENTIFICATION}
+   \end{Large}} \\
+   \hline
+   \begin{Large} \textbf{Titre} \end{Large} & \begin{Large} S'authentifier \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Objectif} \end{Large} & \begin{Large} Permet aux utilisateurs de s'authentifier sur l'application \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Acteurs} \end{Large} & \begin{Large} Administrateur,Employé \end{Large}\\
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large} \textbf{DESCRIPTION DES ENCHAINEMENTS} \end{Large}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} précondition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} l'utilisateur n'est pas authentifié sur l'application \end{Large}
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario nominal : \end{Large}}
+   \begin{enumerate}
+      \item \begin{Large} L'utilisateur clique sur la bouton "Admin" ou "utilisateur".\end{Large}
+      \item \begin{Large} Le système retourne le formulaire de connection.\end{Large}
+      \item \begin{Large} L'utilisateur saisit son identifiant et son mot de passe.\end{Large}
+      \item \begin{Large} L'utilisateur clique sur le bouton  $\ll$ Se Connecter $\gg$.\end{Large}
+      \item \begin{Large} L'utilisateur accède à la page d'accueil .\end{Large}
+   \end{enumerate}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario alternatif : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} Si l'identifiant et/ou le mot de passe sont manquants ou invalides , le système affiche un message d'erreur.    \end{Large}  
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Post condition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} L'utilisateur est authentifié et redirigé vers la page d'accueil.\end{Large}
+   \end{itemize}} \\
+   \hline
+\end{tabular}
+\caption{Description textuelle du cas d'utilisation $\ll$ S'authetifier $\gg$}
+\end{table}
+
+
+
+%diag2   
+\newpage
+
+
+\begin{table}[h]
+\centering
+\def\arraystretch{3}
+\begin{tabular}{|p{2.5cm}|p{14.5cm}|}
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large}
+   \textbf{SOMMAIRE D'IDENTIFICATION}
+   \end{Large}} \\
+   \hline
+   \begin{Large} \textbf{Titre} \end{Large} & \begin{Large} Modifier une Facture \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Objectif} \end{Large} & \begin{Large} Permet à l'utilisateur de modifier une facture. \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Acteurs} \end{Large} & \begin{Large} Administrateur,Employé \end{Large}\\
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large} \textbf{DESCRIPTION DES ENCHAINEMENTS} \end{Large}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} précondition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} L'utilisateur est authentifié sur l'application. \end{Large}
+      \item \begin{Large}  Il y a au moins une facture ajouter. \end{Large}
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario nominal : \end{Large}}
+   \begin{enumerate}
+      \item \begin{Large} L'utilisateur clique sur le bouton $\ll$ Modifier une Facture $\gg$ .\end{Large}
+      \item \begin{Large} Le système retourne un menu déroulant des factures.\end{Large}
+      \item \begin{Large} L'utilisateur choisit une facture et clique sur le bouton $\ll$ Modifier $\gg$ .\end{Large}
+      \item \begin{Large} Le système Retourne un formulaire remplit des données de la facture choisit. \end{Large}
+      \item \begin{Large} L'utilisateur modifie les données .\end{Large}
+      \item \begin{Large} L'utilisateur clique sur le bouton $\ll$ Modifier $\gg$.\end{Large}
+      \item \begin{Large} Le système retourne une boite de confirmation.\end{Large}
+      \item \begin{Large} L'utilisateur confirme la supression.\end{Large}
+      \item \begin{Large} Le système affiche un message indiquant le succès de l'opération.\end{Large}
+      
+   \end{enumerate}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario alternatif : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} Le système affiche un message d'erreur si les  informations entrées sont manquants ou erronées.    \end{Large}  
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Post condition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} La facture est Modifié.\end{Large}
+   \end{itemize}} \\
+   \hline
+\end{tabular}
+\caption{Description textuelle du cas d'utilisation $\ll$ Modifier une Facture $\gg$}
+\end{table}
+
+
+%diag3   
+\newpage
+
+
+\begin{table}[h]
+\centering
+\def\arraystretch{3}
+\begin{tabular}{|p{2.5cm}|p{14.5cm}|}
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large}
+   \textbf{SOMMAIRE D'IDENTIFICATION}
+   \end{Large}} \\
+   \hline
+   \begin{Large} \textbf{Titre} \end{Large} & \begin{Large} Supprimer un Employé \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Objectif} \end{Large} & \begin{Large} Permet à l'administrateur de Supprimer un Employé de l'application . \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Acteurs} \end{Large} & \begin{Large} Administrateur \end{Large}\\
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large} \textbf{DESCRIPTION DES ENCHAINEMENTS} \end{Large}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} précondition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} L'utilisateur est authentifié sur l'application. \end{Large}
+      \item \begin{Large}  Il y a au moins un Employé authetifié. \end{Large}
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario nominal : \end{Large}}
+   \begin{enumerate}
+      \item \begin{Large} L'administrateur clique sur le bouton $\ll$ Supprimer un Employé $\gg$ .\end{Large}
+      \item \begin{Large} Le système retourne un menu déroulant des Employé.\end{Large}
+      \item \begin{Large} L'administrateur choisit un Employé et clique sur le bouton $\ll$ Supprimer $\gg$ .\end{Large}
+      \item \begin{Large} Le système retourne une boite de confirmation.\end{Large}
+      \item \begin{Large} L'administrateur confirme la supression.\end{Large}
+      \item \begin{Large} Le système affiche un message indiquant le succès de l'opération.\end{Large}
+      
+   \end{enumerate}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario alternatif : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} L'administarteur annule la supression de l'employé.   \end{Large}  
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Post condition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} L'employé choisi est supprimé.\end{Large}
+   \end{itemize}} \\
+   \hline
+\end{tabular}
+\caption{Description textuelle du cas d'utilisation $\ll$ Supprimer un Utilisateur $\gg$}
+\end{table}
+
+
+%diag4 
+\newpage
+
+
+\begin{table}[h]
+\centering
+\def\arraystretch{3}
+\begin{tabular}{|p{2.5cm}|p{14.5cm}|}
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large}
+   \textbf{SOMMAIRE D'IDENTIFICATION}
+   \end{Large}} \\
+   \hline
+   \begin{Large} \textbf{Titre} \end{Large} & \begin{Large}   Ajouter un compteur \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Objectif} \end{Large} & \begin{Large} Permet à l'administrateur d'Ajouter un compteur . \end{Large} \\
+   \hline
+   \begin{Large} \textbf{Acteurs} \end{Large} & \begin{Large} Administrateur \end{Large}\\
+   \hline
+   \multicolumn{2}{|c|}{\begin{Large} \textbf{DESCRIPTION DES ENCHAINEMENTS} \end{Large}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} précondition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} L'administrateur est authentifié sur l'application. \end{Large}
+      \item \begin{Large}  Il y a au moins un District et un Local ajouté. \end{Large}
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario nominal : \end{Large}}
+   \begin{enumerate}
+      \item \begin{Large} L'administrateur clique sur le bouton $\ll$ Ajouter un compteur $\gg$ .\end{Large}
+      \item \begin{Large} Le système retourne un formulaire  .\end{Large}
+      \item \begin{Large} L'administrateur choisit le District et le local a partir du menu déroulant.\end{Large}
+      \item \begin{Large} L'administrateur choisit  le type de compteur.\end{Large}
+      \item \begin{Large} L'administrateur saisit la référence du compteur et clique sur le bouton $\ll$ Ajouter $\gg$.\end{Large}
+      \item \begin{Large} Le système affiche un message indiquant le succès de l'opération.\end{Large}
+      
+   \end{enumerate}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Scénario alternatif : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} Le système affiche un message d'erreur si les  informations entrées sont manquants ou erronées. .   \end{Large}  
+   \end{itemize}} \\
+   \hline
+   \multicolumn{2}{|p{17cm}|}{\textbf{\begin{Large} Post condition : \end{Large}}
+   \begin{itemize}[label={$\bullet$}]
+      \item \begin{Large} Le compteur est ajouté.\end{Large}
+   \end{itemize}} \\
+   \hline
+\end{tabular}
+\caption{Description textuelle du cas d'utilisation $\ll$ Ajouter un compteur $\gg$}
+\end{table}
+
+
+
+
+\end{document}
